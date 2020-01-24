@@ -44,7 +44,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Search}></Route>
             <Route path="/search" component={Search}></Route>
-            <Route path="/api/books" component={Saved}></Route>
             <Route path="/saved" component={Saved}></Route>
 
           </Switch>

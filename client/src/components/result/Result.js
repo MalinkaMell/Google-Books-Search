@@ -4,24 +4,33 @@ import API from "../../utils/API";
 import SaveBtn from '../save/Save';
 import ViewBtn from '../view/View';
 
-const Result = (props) => {
+class Result extends React.Component {
 
-  const handleFormSubmit = (event, item) => {
+  state = {
+    buttonClicked: false
+  }
+
+   handleFormSubmit = (event, item) => {
+
     event.preventDefault();
     console.log(item);
-
+    this.setState({buttonClicked: true})
     API
       .saveBook(item)
       .then((res) => {
-        window.location.href = "/saved"
+        this.setState({buttonClicked: false});
+        window.location.href = "/saved";
       })
       .catch(err => console.log(err));
+
   }
 
-  return (
-    props.results.items.length > 0 ?
+render()
+ {
+   return (
+    this.props.results.items.length > 0 ?
 
-    props.results.items.map(result => (
+    this.props.results.items.map(result => (
       <Card bg="light" key={result.id} className="my-3">
         <Card.Header as="h5" className="d-flex justify-content-between align-items-center bg-light">
           <Card.Title className="font-weight-bold">
@@ -31,7 +40,7 @@ const Result = (props) => {
           </Card.Title>
           <ButtonGroup>
             <ViewBtn result={result} />
-            <SaveBtn handleFormSubmit={handleFormSubmit} result={result}/>
+            <SaveBtn handleFormSubmit={this.handleFormSubmit} result={result}/>
           </ButtonGroup>
         </Card.Header>
         <Card.Body>
@@ -45,6 +54,8 @@ const Result = (props) => {
     :
     <h1>No books yet</h1>
   )
+ }
+  
 }
 
 export default Result;
