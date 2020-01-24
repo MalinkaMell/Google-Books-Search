@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, ButtonGroup, Image, Button } from 'react-bootstrap';
 import API from "../../utils/API";
+import SaveBtn from '../save/Save';
+import ViewBtn from '../view/View';
 
 const Result = (props) => {
 
@@ -28,20 +30,8 @@ const Result = (props) => {
             <small>{[...result.volumeInfo.authors].join(", ")}</small>
           </Card.Title>
           <ButtonGroup>
-            <a className="btn btn-warning"
-              href={result.volumeInfo.previewLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >View</a>
-            <Button variant="danger"
-              onClick={(event) => handleFormSubmit(event, {
-                title: result.volumeInfo.title,
-                authors: [...result.volumeInfo.authors].join(", "),
-                description: result.volumeInfo.description,
-                image: result.volumeInfo.imageLinks.thumbnail,
-                link: result.volumeInfo.previewLink
-              })}
-            >Save</Button>
+            <ViewBtn result={result} />
+            <SaveBtn handleFormSubmit={handleFormSubmit} result={result}/>
           </ButtonGroup>
         </Card.Header>
         <Card.Body>
