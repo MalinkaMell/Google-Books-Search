@@ -1,6 +1,6 @@
 # Google-Books-Search
 
-![Banner](public/images/githubtpl.png)
+![Banner](client/public/images/githubtpl.png)
 
 ### Overview
 
