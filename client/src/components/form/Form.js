@@ -27,7 +27,6 @@ const SearchForm = (props) => {
         </Col>
       </Row>
     </Container>
-
   );
 }
 

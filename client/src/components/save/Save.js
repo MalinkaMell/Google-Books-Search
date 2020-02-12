@@ -30,7 +30,6 @@ const SaveBtn = (props) => {
     )
   }
 
-  
 }
 
 export default SaveBtn;

@@ -5,7 +5,6 @@ import './NavBar.css';
 
 const NavBar = () => {
   return (
-
       <Navbar expand="lg" sticky="top" className="mynavbar">
         <Container>
           <Navbar.Brand><NavLink to="/" className="text-light">(React) Google Books Search</NavLink></Navbar.Brand>
