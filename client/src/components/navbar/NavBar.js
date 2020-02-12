@@ -3,7 +3,7 @@ import { Navbar, Container } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
 import './NavBar.css';
 
-const NavBar = () => {
+const NavBar = (props) => {
   return (
       <Navbar expand="lg" sticky="top" className="mynavbar">
         <Container>
@@ -13,9 +13,9 @@ const NavBar = () => {
             <NavLink to="/saved" className="btn btn-danger ml-auto">Saved books</NavLink>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
+      </Navbar> 
 
-  );
+  )
 }
 
 export default NavBar;
