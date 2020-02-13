@@ -4,7 +4,7 @@ import Result from "../result/Result";
 
 const ResultsList = (props) => {
   return (
-    /* <React.Fragment>
+    <React.Fragment>
       <Container className="p-4 mb-5">
         <Card>
           <Card.Header>Results</Card.Header>
@@ -13,8 +13,7 @@ const ResultsList = (props) => {
           </Card.Body>
         </Card>
       </Container>
-    </React.Fragment> */
-    <h1>resultlist</h1>
+    </React.Fragment> 
   );
 }
 

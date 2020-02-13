@@ -53,7 +53,6 @@ render()
     ))
     :
     <h1>No books yet</h1>
-    <h1>result</h1>
   ) 
  }
   

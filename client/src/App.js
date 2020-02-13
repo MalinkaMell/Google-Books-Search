@@ -7,28 +7,6 @@ import Search from "./pages/Search";
 import Saved from "./pages/Saved";
 
 
-<<<<<<< HEAD
-class App extends Component {
-  
-  render() {
-
-    return (
-      <div>
-        <Router>
-          <NavBar />
-          <Switch>
-            <Route exact path="/"><Search /></Route>
-            <Route path="/search"><Search /></Route>
-            <Route path="/saved"><Saved /></Route>
-
-          </Switch>
-          <Footer />
-        </Router>
-        
-      </div>
-    );
-  }
-=======
 const App = () => {
 
   return (
@@ -45,7 +23,6 @@ const App = () => {
     </React.Fragment>
   );
 
->>>>>>> abe7e73a2cdf0c14cd2ee6be5403dc0a652c5a3d
 }
 
 export default App;
